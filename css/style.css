@@ -1,0 +1,139 @@
+@font-face {
+	font-family: OpenSans;
+	src: url("../fonts/OpenSans-Bold.ttf");
+	src: url("../fonts/OpenSans-BoldItalic.ttf");
+	src: url("../fonts/OpenSans-Italic.ttf");
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+.main-body {
+	font-family: OpenSans;
+}
+
+
+.card-list {
+	max-width: 400px;
+	margin: 50px auto 0;
+	border: 1px solid #bdbdbd;
+}
+
+.card-header {
+	padding: 20px 50px;
+	background-color: #51b736;
+	font-size: 36px;
+	color: #ffffff;
+
+}
+
+.card-title {
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.card-wrapper {
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.card-item-list {
+	text-align: center;
+	padding: 15px 0;
+	min-height: 200px;
+}
+
+.list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.main-content {
+	width: 80%;
+	padding: 0 10px;
+	text-align: left;
+	font-size: 15px;
+}
+
+.hide {
+	display: none;
+}
+
+.input-for-edit {
+	width: 100%;
+}
+.card-img-edit {
+	margin-right: 10px;
+}
+
+.form-wrapper {
+	background-color: #bdbdbd;
+	padding: 15px;
+}
+.form-entering {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.text-input {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #949494;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 8px 0 8px 10px;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	font-family: OpenSans;
+}
+
+.text-input:focus {
+	outline: 1px solid #51b736;
+}
+
+.text-submit {
+	background: #ffffff;
+	font-size: 12px;
+	line-height: 24px;
+	color: #282828;
+	padding: 6px 10px;
+	border: none;
+	transition: all 0.3s;
+	font-family: OpenSans;
+}
+
+.text-submit:hover {
+	background: #339933;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.card-footer {
+	background-color: #282828;
+}
+
+.footer-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-draw-progress {
+	width: 60%;
+	margin: 15px auto;
+	background-color: #ffffff;
+	height: 40px;
+}
+
+.draw-progress {
+	height: 100%;
+	background-color: #ffffff;
+}
+
