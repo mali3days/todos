@@ -1,0 +1,104 @@
+/* reset*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+    margin: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+ul, li{
+    list-style: none;
+}
+
+
+.card{
+    margin: 50px 20px;
+    padding-bottom: 20px;
+
+}
+.plus{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;;
+}
+.edit-card-name{
+    font-size: 20px;
+    cursor: pointer;
+}
+.progress{
+    width: 100%;
+    margin-right: 15px;
+    height: 50px;
+}
+/*.progress-bar{*/
+    /*width: 50%;*/
+/*}*/
+.edit-window{
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-bottom: .75rem;
+    padding: 0;
+    margin-left: -9px;
+
+}
+.edit-li-wind{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+.new-items{
+    background-color: transparent;
+    line-height: 1.2;
+    border: none;
+}
+.edit-window:focus, .new-items:focus, .edit-li-wind:focus{
+    outline: none;
+}
+.card-body{
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.to-do-list{
+    padding: 0;
+    margin-bottom: 30px;
+}
+.list-item{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trash{
+    margin-left: 15px;
+}
+.content{
+    display: inline-block;
+    padding-left: 10px;
+    margin: 10px;
+    width: 100%;
+}
