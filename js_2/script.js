@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
     let body = document.querySelector('body');
-    body.innerHTML = "<main><h1></h1><ul></ul><div><input><button></button></div></main>";
-
+    body.innerHTML = "<main><h1></h1><ul></ul><div><input><button></button></div><div><span></span></div></main>";
+    
     let container = document.querySelector('main');
     container.classList.add('container');
 
@@ -22,6 +22,12 @@ window.addEventListener('load', function(){
     button.classList.add('btn', 'input-save');
     button.innerHTML = 'Add to list';
 
+    let statusContainer = document.getElementsByTagName('div')[1];
+    statusContainer.classList.add('status-container');
+
+    let statusPercent = document.querySelector('span');
+    statusPercent.classList.add('status-fill')
+
     button.addEventListener('click', addListElement, false);
    
     
@@ -31,6 +37,7 @@ window.addEventListener('load', function(){
         let checkbox = getElem('input', 'list-check');
         checkbox.setAttribute('type', 'checkbox');
         checkbox.setAttribute('name', 'checklist');
+        checkbox.addEventListener('click', checkboxCheck, false);
     
         let text = getElem('input', 'list-item-text');
         text.value = enterData.value;
@@ -52,15 +59,29 @@ window.addEventListener('load', function(){
         li.appendChild(deleteItem);
         list.appendChild(li);
         enterData.value = '';
+        checkboxCheck()
     }
+
     function removeListElement() { 
         this.parentElement.remove();
+        checkboxCheck()
     }
     
     function changeText() {
         let text = this.previousSibling;
         text.disabled = false;
         text.focus();
+    }
+
+    function checkboxCheck() {
+        let checkboxes = document.querySelectorAll('li');
+        let checkAmount = checkboxes.length;
+        let checked = document.querySelectorAll('input[type="checkbox"]:checked');
+        let checkedAmount = checked.length;
+
+        let fill = checkedAmount*100/checkAmount;
+        let fillContainer = document.querySelector('.status-fill');
+        fillContainer.style.width = fill+'%';
     }
     
 }, false)

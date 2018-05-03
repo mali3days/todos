@@ -33,6 +33,7 @@ body * {
 .input-inner {
     width: 200px;
     margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
 }
 .list-item-text {
@@ -59,4 +60,17 @@ body * {
 }
 .editElemList {
     margin-right: 15px;
+}
+.status-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+.status-fill {
+    display: block;
+    height: 100%;
+    background-color: #262626;
+    width: 0;
 }
