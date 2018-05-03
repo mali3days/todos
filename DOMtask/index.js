@@ -37,6 +37,18 @@ window.onload = function() {
 
     body.appendChild(cardPlace);
 
+    function updateProgress() {
+        let checks = document.getElementsByClassName('checkbox');
+        let sum = 0;
+        for (let i = 0; i < checks.length; i++) {
+            if (checks[i].checked) {
+                sum += 1;
+            }
+        }
+        progressBar.innerHTML = Math.round((sum/checks.length)*100) + '%';
+        progressBar.style.width = Math.round((sum/checks.length)*100) + '%';
+    }
+
     function addPurchase() {
         if (input.value) {
             let purchaseItem = document.createElement('li');
@@ -72,6 +84,8 @@ window.onload = function() {
             input.value = '';
 
             listItems.appendChild(purchaseItem);
+
+            updateProgress();
         }
     }
 
@@ -118,15 +132,7 @@ window.onload = function() {
                 editPurchase();
             }
         } else if (event.target.classList.contains('checkbox')) {
-            let checks = document.getElementsByClassName('checkbox');
-            let sum = 0;
-            for (let i = 0; i < checks.length; i++) {
-                if (checks[i].checked) {
-                    sum += 1;
-                }
-            }
-            progressBar.innerHTML = Math.round((sum/checks.length)*100) + '%';
-            progressBar.style.width = Math.round((sum/checks.length)*100) + '%';
+            updateProgress();
         }
     };
 };
