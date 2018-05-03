@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    border: 3px solid #000;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    background:#176CAA;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.list-group-item {
+    display: flex;
+    padding: 30px;
+    border-bottom: 2px solid #ccc;
+    justify-content: space-between;
+    text-align: center;
+}
+.buy-list {
+    display: flex;
+    flex-direction: column;
+}
