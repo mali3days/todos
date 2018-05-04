@@ -54,6 +54,9 @@ body {
     margin: 0 auto;
 }
 
+.container {
+
+}
 .toggle_input {
      display: none;
  }

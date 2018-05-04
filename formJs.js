@@ -99,9 +99,18 @@ window.onload = function () {
         checked = document.querySelectorAll('input[type="checkbox"]').length;
         let percent = Math.round((count / checked) * 100);
         let width = percent;
+        if(count == 0 || checked == 0) {
+            elem.style.width = 0 + '%';
+            elem.innerHTML = '0%';
+        }
+        else
+        {
 
-        elem.style.width = width + '%';
-        elem.innerHTML = width * 1  + '%';
+            elem.style.width = width + '%';
+            elem.innerHTML = width * 1  + '%';
+
+        }
+
 
 
     }
