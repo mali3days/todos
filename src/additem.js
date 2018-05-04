@@ -1,9 +1,6 @@
 import { createNewLi } from './new-li';
 import { database } from './database';
 let index = 0;
-
-
-
 export const addItemToList = (item) => {
     const list = document.getElementsByClassName("buy-list")[0];
     const li = createNewLi(item.value.title)
@@ -14,6 +11,7 @@ export const addItemToList = (item) => {
 
 export const renderList = () => {
     for(let item of database) {
+        console.log(item)
         item ? addItemToList(item) : null
     }
 }
@@ -29,6 +27,7 @@ export const addHandler = () => {
             flag: 1
         }
     }
+    console.log(database)
     database.push(data)
     input.value = "";
     addItemToList(data);

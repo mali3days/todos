@@ -3,6 +3,7 @@ export const createNewLi = (value) => {
     const li = document.createElement("li");
     const table = document.createElement("div");
     table.innerText = value;
+    table.className = "table";
     
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "text");
@@ -11,8 +12,14 @@ export const createNewLi = (value) => {
     const remove = document.createElement("i");
     remove.className = "fas fa-times";
     remove.addEventListener("click", e =>{
-        let parent = e.target.parentElement
-        console.log(parent)
+        e.preventDefault();
+        let parent = e.target.parentElement;
+        const removeElem = elem => {
+            elem.localName !== "li" ? 
+            removeElem(elem.parentElement) :
+            elem.remove()
+        }
+        removeElem(parent);    
     })
 
     li.appendChild(remove);
