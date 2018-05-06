@@ -1,8 +1,7 @@
 import "./styles/main.css"
 
 import { createCard } from "./create-card";
-import { handler } from "./hanler";
-import { addItemToList,renderList,addHandler } from './additem';
+import { addItemToList,renderList,addHandler } from './operations';
 
 (() => {
     createCard();

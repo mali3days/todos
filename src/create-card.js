@@ -1,30 +1,72 @@
-import { addItemToList,renderList,addHandler } from './additem';
-import { createElemWithClass } from './create-elem';
+import {
+    addItemToList,
+    renderList,
+    addHandler
+} from './operations';
+import {
+    createElemWithClass, createElem
+} from './create-elem';
 
 export const createCard = () => {
-//create wrap-div
+    //create wrap-div
 
     const card = document.createDocumentFragment();
-    const wrapper = createElemWithClass('div','wrapper');
-    const title = createElemWithClass('h1','title');
+    const wrapper = createElemWithClass('div', 'wrapper');
+    const title = createElemWithClass('h1', 'title');
     title.innerHTML = "ПОКУПКИ"
     const buyList = document.createElement("ul");
     buyList.className = "buy-list";
 
-    const inputField = createElemWithClass('div','input-field');
-    const input = createElemWithClass('input','add-input');
-    const button = createElemWithClass('i','fas','fa-plus');
+    const inputField = createElemWithClass('div', 'input-field');
+    // const input = createElemWithClass('input', 'add-input');
+    const input = createElem({
+        tagname: "input",
+        classes: "add-input",
+        attr: [
+            {
+                name: "placeholder",
+                value: "Enter text"
+            }
+        ]
+    })
+    const button = createElemWithClass('i', 'fas', 'fa-plus');
+    wrapper.addEventListener("click", e => {
+        const target = e.target;
+        console.log(target)
+        target.className.indexOf("fa-plus") >=0 ? (()=>{
+            addItemToList(target)
+        })() : null
+    });
 
-    button.addEventListener("click",addHandler);
+    wrapper.addEventListener("keydown", e => {
+        const target = e.target;
+        console.log(e.keyCode)
+        target.className === "add-input" 
+        && e.keyCode === 13 
+        && target.value !== ""
+        ? (() => {
+            addItemToList(target);
+            target.value = "";
+        })() 
+        : null;
+    })
     inputField.appendChild(input);
     inputField.appendChild(button);
-
-
-//add elements
     wrapper.appendChild(title);
-    wrapper.appendChild(buyList);
     wrapper.appendChild(inputField);
+    wrapper.appendChild(buyList);
+    // CREATE SCALE
+    const scaleDiv = createElemWithClass("div","scale-div");
+    const scale = createElemWithClass("div","scale");
+    const scaleValue = createElemWithClass("div","scale-value");
+    scale.appendChild(scaleValue);
+    scaleDiv.appendChild(scale);
+    wrapper.appendChild(scaleDiv);
+
     card.appendChild(wrapper);
+
+
+
 
     document.body.appendChild(card);
 

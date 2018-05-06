@@ -13,14 +13,19 @@ export const createNewLi = (value) => {
         classes: "table",
         text: value
     })
+    const checkbox = createElem({
+        tagname: "input",
+        classes: "check-button",
+        attr: [
+            {
+                name: "type",
+                value: "checkbox"
+            }
+        ]
 
-    // const li = document.createElement("li");
-    // const table = document.createElement("div");
-    // table.innerText = value;
-    // table.className = "table";
-    
-    const checkbox = document.createElement("input");
-    checkbox.setAttribute("type", "text");
+    })
+    // const checkbox = document.createElement("input");
+    // checkbox.setAttribute("type", "checkbox");
     const edit = document.createElement("i");
     edit.className = "fas fa-edit";
     const remove = document.createElement("i");
@@ -36,7 +41,7 @@ export const createNewLi = (value) => {
         }
         removeElem(parent);    
     })
-
+    li.appendChild(checkbox);
     li.appendChild(remove);
     li.appendChild(edit);
     li.appendChild(table);

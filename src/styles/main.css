@@ -24,20 +24,42 @@ li {
 }
 .list-group-item {
     display: flex;
-    padding: 30px;
+    height: 50px;
     border-bottom: 2px solid #ccc;
     justify-content: space-between;
     text-align: center;
 }
 .buy-list {
-    display: flex;
-    flex-direction: column;
+    height: 300px;
+    overflow-y: scroll;
 }
 
 
 .add-input {
     border: 3px solid #000;
-    padding: 20px 40px;
-
+    height: 70px;
+    width: 60%;
+    display: inline-block;
+    text-indent: 30px;
     font-size: 1.5em;
+}
+.fa-plus {
+    color: green;
+    font-size: 3em;
+}
+.fa-plus:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.scale-div {
+    height: 100px;
+    background: yellowgreen;
+    padding: 10px;
+}
+
+.scale {
+    height: 100%;
+    border: 3px solid #000;
+    width: 50%;
 }

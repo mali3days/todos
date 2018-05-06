@@ -3,8 +3,10 @@ import { database } from './database';
 let index = 0;
 export const addItemToList = (item) => {
     const list = document.getElementsByClassName("buy-list")[0];
-    const li = createNewLi(item.value.title)
-    list.appendChild(li)
+    const input = document.getElementsByClassName("add-input")[0];
+    const li = createNewLi(input.value);
+    list.appendChild(li);
+    input.value = "";
 }
 
 
