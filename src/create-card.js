@@ -1,7 +1,8 @@
 import {
     addItemToList,
     renderList,
-    addHandler
+    addHandler,
+    calcSelectProc
 } from './operations';
 import {
     createElemWithClass, createElem
@@ -55,6 +56,21 @@ export const createCard = () => {
     wrapper.appendChild(title);
     wrapper.appendChild(inputField);
     wrapper.appendChild(buyList);
+
+    const test = createElem({
+        tagname: "button",
+        classes: "testbtn",
+        text: "test"
+    })
+
+    test.addEventListener("click", e => {
+        (() => {
+            const scale = document.getElementsByClassName("scale-value")[0];
+            const procent = calcSelectProc();
+            scale.style.width = `${procent*100}%`
+        })()
+    })
+
     // CREATE SCALE
     const scaleDiv = createElemWithClass("div","scale-div");
     const scale = createElemWithClass("div","scale");
@@ -62,7 +78,7 @@ export const createCard = () => {
     scale.appendChild(scaleValue);
     scaleDiv.appendChild(scale);
     wrapper.appendChild(scaleDiv);
-
+    wrapper.appendChild(test)
     card.appendChild(wrapper);
 
 
