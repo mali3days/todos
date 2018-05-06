@@ -9,15 +9,37 @@ export const createElemWithClass = (tag, ...classes) => {
 export const createElem = params => {
     const elem = document.createElement(params.tagname);
     elem.className = params.classes || null;
-    params.text ? (() => { elem.innerText = params.text })() : null;
-    Array.isArray(params.attr) === true ?
-        (() => {
-            for (let item of params.attr) {
-                let { name, value } = item;
-                elem.setAttribute(name, value);
-            }
-            // console.log("arr is true")
-        })()
-        : null;
+    params.text ? (() => {
+        elem.innerText = params.text
+    })() : null;
+
+    if (params.attr) {
+        Array.isArray(params.attr) === true ?
+            (() => {
+                for (let item of params.attr) {
+                    let {
+                        name,
+                        value
+                    } = item;
+                    elem.setAttribute(name, value);
+                }
+                // console.log("arr is true")
+            })() :
+            null;
+    }
+    if (params.styles) {
+        Array.isArray(params.styles) === true ?
+            (() => {
+                for (let item of params.styles) {
+                    let {
+                        name,
+                        value
+                    } = item;
+                    elem.style[name] = value;
+                }
+            })() :
+            null
+    }
+
     return elem;
 }

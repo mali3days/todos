@@ -22,12 +22,22 @@ li {
     display: flex;
     justify-content: center;
 }
-.list-group-item {
+/* .list-group-item {
     display: flex;
     height: 50px;
     border-bottom: 2px solid #ccc;
     justify-content: space-between;
     text-align: center;
+} */
+.list-group-item {
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: 5fr 30px auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "table check edit times";
+    grid-gap: 20px;
+    padding: 20px;
+    /* background: #ccc; */
 }
 .buy-list {
     height: 300px;
@@ -51,7 +61,32 @@ li {
     color: greenyellow;
     cursor: pointer;
 }
-
+.fa-edit {
+    display: inline-block;
+    grid-area: edit;
+    font-size: 3em;
+    color: #A4C4A1;
+}
+.fa-edit:hover {
+    color: #00FF78;
+}
+.fa-times {
+    display: inline-block;
+    grid-area: times;
+    font-size: 3em;
+    color: red;
+}
+.fa-times:hover {
+    color: #FF0055;
+    cursor: pointer;
+}
+.toggle-div {
+    display: block;
+    grid-area: table;
+}
+.check-button {
+    grid-area: check ;
+}
 .scale-div {
     height: 100px;
     /* background: yellowgreen; */

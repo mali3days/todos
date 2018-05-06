@@ -12,28 +12,20 @@ export const addItemToList = (item) => {
 
 export const calcSelectProc = () => {
     const list = document.getElementsByClassName("buy-list")[0];
-    console.log(list)
     const listArr = [...list.childNodes]
-    console.log(listArr)
-
     const listCheckbox = listArr.map( item => {
         return item.childNodes[0];
     })
-    console.log(listCheckbox)
-
     const checkedList = listCheckbox.filter( item => item.checked )
-    console.log(checkedList)
-
     const listArrLength = listCheckbox.length;
-    console.log(listArrLength)
-    
     const checkedListLength = checkedList.length;
-    // console.log(list)
-    
     const procent = checkedListLength/listArrLength || 0;
     return procent;
-    // return checkedListLength/listArrLength + "%";
-
+}
+export const setProgresssStyle = () => {
+    const scale = document.getElementsByClassName("scale-value")[0];
+    const procent = calcSelectProc();
+    scale.style.width = `${procent*100}%`;
 }
 
 
@@ -43,18 +35,22 @@ export const renderList = () => {
     }
 }
 
-export const addHandler = () => {
-    const input = document.getElementsByClassName("add-input")[0];
-    const title = input.value
-    const data = {
-        key: index++,
-        value: {
-            title,
-            flag: 1
-        }
-    }
-    database.push(data)
-    input.value = "";
-    addItemToList(data);
+// export const removeItem = target => {
+//     const parent = target
+// }
 
-}
+// export const addHandler = () => {
+//     const input = document.getElementsByClassName("add-input")[0];
+//     const title = input.value
+//     const data = {
+//         key: index++,
+//         value: {
+//             title,
+//             flag: 1
+//         }
+//     }
+//     database.push(data)
+//     input.value = "";
+//     addItemToList(data);
+
+// }

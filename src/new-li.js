@@ -1,12 +1,10 @@
+import { setProgresssStyle } from './operations'
 import { createElem,createElemWithClass } from './create-elem';
 export const createNewLi = (value) => {
     const newLi = document.createDocumentFragment();
-
-    // const li
     const li = createElem({
-        tagname: "div",
+        tagname: "li",
         classes: "list-group-item",
-        // text: value
     })
     const table = createElem({
         tagname: "div",
@@ -22,29 +20,56 @@ export const createNewLi = (value) => {
                 value: "checkbox"
             }
         ]
-
     })
-    // const checkbox = document.createElement("input");
-    // checkbox.setAttribute("type", "checkbox");
+    const toggleDiv = createElem({
+        tagname: "div",
+        classes: "toggle-div"
+    })
+    const hideInput = createElem({
+        tagname: "input",
+        classes: "hide-input",
+        attr: [
+            {
+                name: "type",
+                value: "text"
+            }
+        ],
+        styles: [
+            {
+                name: "display",
+                value: "none"
+            }
+        ]
+        // attr: []
+    })
+    toggleDiv.appendChild(table);
+    toggleDiv.appendChild(hideInput);
+    checkbox.addEventListener("click", e => {
+        setProgresssStyle()
+    })
+
     const edit = document.createElement("i");
     edit.className = "fas fa-edit";
     const remove = document.createElement("i");
     remove.className = "fas fa-times";
 
     remove.addEventListener("click", e =>{
-        e.preventDefault();
+        // e.preventDefault();
         let parent = e.target.parentElement;
         const removeElem = elem => {
             elem.localName !== "li" ? 
             removeElem(elem.parentElement) :
             elem.remove()
         }
-        removeElem(parent);    
+        confirm("are you sure ?") === true 
+        ? removeElem(parent) 
+        : null;
+        setProgresssStyle();    
     })
     li.appendChild(checkbox);
     li.appendChild(remove);
     li.appendChild(edit);
-    li.appendChild(table);
+    li.appendChild(toggleDiv);
     
     return newLi.appendChild(li)
 }
