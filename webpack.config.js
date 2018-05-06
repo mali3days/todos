@@ -1,5 +1,6 @@
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const config = {
+    devtool: "source-map",
     module: {
         rules: [
             {

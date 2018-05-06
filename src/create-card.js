@@ -1,29 +1,21 @@
 import { addItemToList,renderList,addHandler } from './additem';
+import { createElemWithClass } from './create-elem';
 
 export const createCard = () => {
 //create wrap-div
 
     const card = document.createDocumentFragment();
-    const wrapper = document.createElement("div");
-    wrapper.className = "wrapper";
-//create title
-    const title = document.createElement("h1");
-    title.className = "title";
+    const wrapper = createElemWithClass('div','wrapper');
+    const title = createElemWithClass('h1','title');
     title.innerHTML = "ПОКУПКИ"
-
-//create list
     const buyList = document.createElement("ul");
     buyList.className = "buy-list";
 
-//create input field
-    const inputField = document.createElement("div");
-    inputField.className = "input-field";
-    const input = document.createElement("input");
-    input.className = "add-input"
-    const button = document.createElement("i");
+    const inputField = createElemWithClass('div','input-field');
+    const input = createElemWithClass('input','add-input');
+    const button = createElemWithClass('i','fas','fa-plus');
 
     button.addEventListener("click",addHandler);
-    button.className = "fas fa-plus"
     inputField.appendChild(input);
     inputField.appendChild(button);
 
@@ -34,7 +26,6 @@ export const createCard = () => {
     wrapper.appendChild(inputField);
     card.appendChild(wrapper);
 
-// add wrap to body
     document.body.appendChild(card);
 
 }

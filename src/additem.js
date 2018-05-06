@@ -4,20 +4,17 @@ let index = 0;
 export const addItemToList = (item) => {
     const list = document.getElementsByClassName("buy-list")[0];
     const li = createNewLi(item.value.title)
-    li.className = "list-group-item";
     list.appendChild(li)
 }
 
 
 export const renderList = () => {
     for(let item of database) {
-        console.log(item)
         item ? addItemToList(item) : null
     }
 }
 
 export const addHandler = () => {
-    console.log(database)
     const input = document.getElementsByClassName("add-input")[0];
     const title = input.value
     const data = {
@@ -27,7 +24,6 @@ export const addHandler = () => {
             flag: 1
         }
     }
-    console.log(database)
     database.push(data)
     input.value = "";
     addItemToList(data);
