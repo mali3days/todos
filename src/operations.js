@@ -45,7 +45,7 @@ export const showInput = (input, table) => {
     input.focus()
     table.style.display = "none";
 }
-export const hideInput = (input, table) => {
+export const hideOfInput = (input, table) => {
     const value = input.value;
     table.innerText = value;
     input.style.display = "none";

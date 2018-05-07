@@ -4,7 +4,7 @@ import {
     addHandler,
     setProgresssStyle,
     showInput,
-    hideInput
+    hideOfInput
 
 } from './operations';
 import {
@@ -66,7 +66,7 @@ export const createCard = () => {
             const parent = target.parentElement;
             const input = parent.querySelector(".hide-input");
             const table = parent.querySelector(".table");
-            input.value !== "" ? hideInput(input,table) : null;
+            input.value !== "" ? hideOfInput(input,table) : null;
         })() : null;
     })
     inputField.appendChild(input);
