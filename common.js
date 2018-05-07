@@ -124,6 +124,10 @@ class createCard{
             let conf = confirm('Are you sure?');
             if (conf){
                 li.remove();
+                this.checkedCounter--;
+                this.progress(this.card);
+             }
+                
             }
         })
     }
