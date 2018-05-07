@@ -120,16 +120,18 @@ class createCard{
     }
     removeLi(li){
         this.removeBtn = li.querySelector('.trash');
-        this.removeBtn.addEventListener('click', () => {
+        this.removeBtn.addEventListener('click', (e) => {
             let conf = confirm('Are you sure?');
+            let basket = e.target;
+
             if (conf){
+                if(basket.closest('li').querySelector('.checkbox').checked) {
+                    this.checkedCounter--;
+                }
                 li.remove();
-                this.checkedCounter--;
-                this.progress(this.card);
-             }
-                
             }
-        })
+            this.progress(this.card);
+        });
     }
     checked(li){
 
