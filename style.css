@@ -1,0 +1,52 @@
+.goods { 
+width: 300px; 
+     min-height: 400px; 
+     border: 4px double black; 
+     background-color: khaki; 
+     padding-top: 10px; 
+     padding: 15px; 
+}  
+ 
+.radius { 
+     border-radius: 10px; 
+ } 
+ 
+.toggle-input {
+     display: none;
+ }
+
+.toggle-span {
+    display: none;
+}
+ 
+ .head-title { 
+     max-height: 30px; 
+     border: 4px double black; 
+     margin-top: 10px; 
+     max-width: 150px; 
+     display: flex; 
+     margin: auto; 
+     margin-bottom: 30px;  
+}  
+ 
+ .container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }  
+ 
+ .goods-conteiner { 
+     min-height: 350px;     
+ }  
+ 
+.listStyle { 
+    list-style-type: none;
+ } 
+
+ .block-margin { 
+    margin-bottom: 10px;
+ } 
+ 
+.target-goods { 
+    margin: 10px;
+	} 
