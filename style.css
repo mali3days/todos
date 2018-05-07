@@ -1,0 +1,103 @@
+body * {
+    border-radius: 5px;
+    border: 1px solid grey;
+
+}
+.todo{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 460px;
+    padding: 20px;
+}
+.newTodoBtn{
+    margin: 10px;
+    border-radius: 50%;
+}
+.delTodoBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    border-radius: 50%;
+}
+.div{
+    width: 400px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.header{
+    width: 300px;
+    margin: 5px auto;
+    background-color: whitesmoke
+    color: darkblue;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+.footer{
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.persent{
+    width: 60px;
+    height: 60px;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+}
+.loader{
+    width: 300px;
+    height: 60px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+}
+.inputField,
+.footer {
+    border: none;
+
+}
+.input{
+    font-size: 16px;
+    padding: 12px;
+    margin: 10px;
+}
+.btn{
+    font-size: 13px;
+    padding: 12px;
+    margin: 10px;
+}
+.content{
+    border: none;
+    padding: 30px 10px;
+}
+.ul{
+    list-style-type: none;
+}
+.li{
+    padding: 10px;
+}
+.pen{
+    padding: 5px 7px;
+}
+.btnDel {
+    padding: 5px 10px;
+}
+.loader{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.block{
+    background-color: red;
+}
