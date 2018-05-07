@@ -117,7 +117,6 @@
   body.addEventListener('click', function(ev) {
 
     const searchParent = function(el, type) {
-      console.log(el, type);
       if(el.nodeName === type) {
         return el; 
       }
@@ -138,11 +137,6 @@
       addedEl(added.value, searchParent(ev.target, 'FORM'));
     };
 
-    //Edit li
-    if(ev.target.classList.contains("cell__remove")) {
-      searchParent(ev.target, 'UL').removeChild(ev.target.parentElement);
-    }
-
     // Change li
     if(ev.target.classList.contains("cell__edit")) {
       ev.target.classList.toggle('edit');
@@ -156,13 +150,20 @@
     // Progress bar
     if(ev.target.classList.contains("added__btn") ||
        ev.target.classList.contains("cell__checkbox")||
-      ev.target.classList.contains("cell__remove")
+       ev.target.classList.contains("cell__remove")
     ){
-      const container = searchParent(ev.target, 'FORM');
-      const list = container.querySelector('.list');
-      console.log(list);
-      const percent = container.querySelector('.footer__proc');
-      const scale = container.querySelector('.footer__sh');
+
+      const elem = ev.target;
+      const containers = elem.closest('form');
+      const list = containers.querySelector('.list');
+      const percent = containers.querySelector('.footer__proc');
+      const scale = containers.querySelector('.footer__sh');
+
+         //Delete li
+      if(ev.target.classList.contains("cell__remove")) {
+        searchParent(ev.target, 'UL').removeChild(ev.target.parentElement);
+      }
+
       let check = 0;
       for(let i = 0; i < list.children.length; i++) {
         const box = list.children[i].querySelector('input[type=checkbox]')
@@ -170,7 +171,6 @@
           check += 1;
         }
       } 
-      console.log(check);
       let how = check / list.children.length;
       how = how.toFixed(2).replace(/^0\.+/, '');
       if(how == 1.0) {
@@ -183,7 +183,6 @@
         percent.innerText = how + '%';
       }
       scale.style.width = how + '%';
-
     }
   })
 
