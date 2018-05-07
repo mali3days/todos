@@ -2,7 +2,9 @@ import {
     addItemToList,
     renderList,
     addHandler,
-    setProgresssStyle
+    setProgresssStyle,
+    showInput,
+    hideInput
 
 } from './operations';
 import {
@@ -42,11 +44,10 @@ export const createCard = () => {
         target.className.indexOf("fa-edit") >= 0 ? (() => {
             const toggleDiv = target.nextSibling;
             const input = toggleDiv.querySelector(".hide-input");
-            const table = toggleDiv.querySelector(".table")
-            console.log(input,table)
-            input.style.display = "block";
-            table.style.display = "none";
+            const table = toggleDiv.querySelector(".table");
+            showInput(input,table);
         })() : null;
+
     });
 
     wrapper.addEventListener("keydown", e => {
@@ -61,6 +62,12 @@ export const createCard = () => {
                 target.value = "";
             })() :
             null;
+        target.className === "hide-input"  && e.keyCode ===13 ? ( () => {
+            const parent = target.parentElement;
+            const input = parent.querySelector(".hide-input");
+            const table = parent.querySelector(".table");
+            input.value !== "" ? hideInput(input,table) : null;
+        })() : null;
     })
     inputField.appendChild(input);
     inputField.appendChild(button);

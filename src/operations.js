@@ -1,5 +1,9 @@
-import { createNewLi } from './new-li';
-import { database } from './database';
+import {
+    createNewLi
+} from './new-li';
+import {
+    database
+} from './database';
 let index = 0;
 export const addItemToList = (item) => {
 
@@ -13,13 +17,13 @@ export const addItemToList = (item) => {
 export const calcSelectProc = () => {
     const list = document.getElementsByClassName("buy-list")[0];
     const listArr = [...list.childNodes]
-    const listCheckbox = listArr.map( item => {
+    const listCheckbox = listArr.map(item => {
         return item.childNodes[0];
     })
-    const checkedList = listCheckbox.filter( item => item.checked )
+    const checkedList = listCheckbox.filter(item => item.checked)
     const listArrLength = listCheckbox.length;
     const checkedListLength = checkedList.length;
-    const procent = checkedListLength/listArrLength || 0;
+    const procent = checkedListLength / listArrLength || 0;
     return procent;
 }
 export const setProgresssStyle = () => {
@@ -30,11 +34,23 @@ export const setProgresssStyle = () => {
 
 
 export const renderList = () => {
-    for(let item of database) {
+    for (let item of database) {
         item ? addItemToList(item) : null
     }
 }
 
+export const showInput = (input, table) => {
+    input.value = table.innerText;
+    input.style.display = "block";
+    input.focus()
+    table.style.display = "none";
+}
+export const hideInput = (input, table) => {
+    const value = input.value;
+    table.innerText = value;
+    input.style.display = "none";
+    table.style.display = "block";
+}
 // export const removeItem = target => {
 //     const parent = target
 // }
