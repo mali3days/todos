@@ -121,7 +121,6 @@ class createCard{
     removeLi(li){
         this.removeBtn = li.querySelector('.trash');
 
-
         this.removeBtn.addEventListener('click', (e) => {
             let conf = confirm('Are you sure?');
             let basket = e.target;
@@ -156,12 +155,12 @@ class createCard{
         this.percent = card.querySelector('.percent');
 
         let liAmount = this.ul.childElementCount,
+
             countedPercent = parseFloat(((this.checkedCounter/liAmount) * 100).toFixed(1));
         
         if (!countedPercent){
             countedPercent = 0;
         }
-
         this.percent.innerHTML = `${countedPercent}%`;
         this.progressBar.style.width = `${countedPercent}%`
     }
