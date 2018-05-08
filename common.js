@@ -120,15 +120,20 @@ class createCard{
     }
     removeLi(li){
         this.removeBtn = li.querySelector('.trash');
-        this.removeBtn.addEventListener('click', () => {
-            let conf = confirm('Are you sure?');
-            if (conf){
-                li.remove();
-                this.checkedCounter--;
-                this.progress(this.card);
-            }
-        });
 
+
+        this.removeBtn.addEventListener('click', (e) => {
+            let conf = confirm('Are you sure?');
+            let basket = e.target;
+
+            if (conf){
+                if(basket.closest('li').querySelector('.checkbox').checked) {
+                    this.checkedCounter--;
+                }
+                li.remove();
+            }
+            this.progress(this.card);
+        });
 
     }
     checked(li){
@@ -151,7 +156,11 @@ class createCard{
         this.percent = card.querySelector('.percent');
 
         let liAmount = this.ul.childElementCount,
-            countedPercent = parseFloat(((this.checkedCounter/liAmount) * 100).toFixed(1))
+            countedPercent = parseFloat(((this.checkedCounter/liAmount) * 100).toFixed(1));
+        
+        if (!countedPercent){
+            countedPercent = 0;
+        }
 
         this.percent.innerHTML = `${countedPercent}%`;
         this.progressBar.style.width = `${countedPercent}%`
