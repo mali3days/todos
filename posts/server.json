@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "newsTitle": "News3",
+      "newsImg": "http://via.placeholder.com/350x153",
+      "newstext": "Some text for news3"
+    },
+    {
+      "id": 6,
+      "newsTitle": "News5",
+      "newsImg": "http://via.placeholder.com/350x155",
+      "newstext": "Some text for news5"
+    },
+    {
+      "newsTitle": "7",
+      "newsImg": "http://via.placeholder.com/350x155",
+      "newstext": "7",
+      "id": 7
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
