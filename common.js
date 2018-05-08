@@ -158,6 +158,7 @@ class createCard{
 
             countedPercent = parseFloat(((this.checkedCounter/liAmount) * 100).toFixed(1));
         
+
         if (!countedPercent){
             countedPercent = 0;
         }
