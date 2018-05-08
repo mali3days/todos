@@ -40,9 +40,9 @@ $( document ).ready(function() {
 
     function addPost() {
         let new_post_obj= {
-            "newsTitle": $(new_post_input_name).val(),
-            "newsImg": $(new_post_input_url).val(),
-            "newstext": $(new_post_textarea).val()
+            "newsTitle": $(new_post_input_name).val() || 'Post name' ,
+            "newsImg": $(new_post_input_url).val() || 'https://www.royal-canin.ru/upload/medialibrary/ccb/metka.jpg',
+            "newstext": $(new_post_textarea).val() || 'some text'
         };
 
         let data = JSON.stringify( new_post_obj );

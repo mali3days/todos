@@ -17,6 +17,12 @@
       "newsImg": "http://via.placeholder.com/350x155",
       "newstext": "7",
       "id": 7
+    },
+    {
+      "newsTitle": "Post name",
+      "newsImg": "https://www.royal-canin.ru/upload/medialibrary/ccb/metka.jpg",
+      "newstext": "some text",
+      "id": 8
     }
   ],
   "comments": [],
