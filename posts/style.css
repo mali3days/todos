@@ -1,0 +1,24 @@
+body{
+    background-color: #CCCCCC;
+}
+
+.wrapper{
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100vh;
+    overflow: auto;
+}
+.posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cart {
+    margin-top: 20px;
+}
+
+.post-form {
+    width: 100%;
+}
