@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "adad",
+      "body": "asda",
+      "id": 3
+    },
+    {
+      "title": "asda",
+      "body": "asda",
+      "id": 6
+    },
+    {
+      "title": "asda",
+      "body": "asda",
+      "id": 7
+    },
+    {
+      "title": "ada",
+      "body": "ada",
+      "id": 8
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
