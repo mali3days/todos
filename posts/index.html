@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <style>
+        .main-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        main,
+        .post {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post {
+            align-items: center;
+        }
+
+        .add-new-post-section {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header><h1>News</h1></header>
+        <div class="add-new-post-section">
+            <input class="new-post-name" type="text" placeholder="Enter name of new post">
+            <input class="new-post-img-url" type="text" placeholder="Enter img url of new post">
+            <textarea class="new-post-main-text" placeholder="Enter main text of new post"></textarea>
+            <button>Submit</button>
+        </div>
+        <main>
+
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>

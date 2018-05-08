@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+}
+
+.todo-list-wrapper {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.todo-list-wrapper > div {
+    width: 100%;
+    padding: 16px 25px;
+}
+
+.todo-header {
+    background: #dbdbdb;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.todo-header .name-changer {
+    display: none;
+}
+
+.editable .name-changer {
+    display: inline-block;
+}
+
+.editable .name {
+    display: none;
+}
+
+.todo-header h1 {
+    padding-right: 40px;
+}
+
+.todo-header input {
+    height: 37px;
+    margin: 22px 0;
+    width: calc(100% - 40px);
+    margin-right: 40px;
+    border-width: 0;
+    background: #dbdbdb;
+    font-size: 32px;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+.edit {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px !important;
+    height: 20px;
+    color: #fff;
+}
+
+.todo-main {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border-top: 3px solid indianred;
+    padding: 12px 0;
+    background: aliceblue;
+    margin: 6px 0;
+}
+
+.done {
+    border-top-color: limegreen;
+}
+
+.task [type="checkbox"]:first-child,
+.task .edit,
+.task .remove-task {
+    width: 30px !important;
+    height: 30px;
+}
+
+.task .edit,
+.task .remove-task{
+    position: static;
+    top: unset;
+    right: unset;
+    transform: unset;
+    cursor: pointer;
+}
+
+.task .edit,
+.task .remove-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    background: #e7e7e7;
+    border: 1px solid #ccc;
+    color: cornflowerblue;
+    border-radius: 4px;
+}
+
+li .name,
+li .name-changer {
+    width: calc(100% - 117px);
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+
+li .name-changer {
+    border-width: 0;
+    background: aliceblue;
+}
+
+.add-new-task {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-footer {
+    min-height: 100px;
+    display: flex;
+    background: #e7e7e7;
+}
+
+.todo-footer .progress-bar {
+    width: 75%;
+    border: 1px solid black;
+}
+
+.progress-bar .bar-status {
+    background: aqua;
+    height: 100%;
+}
+
+.bar-percent {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.add-new-card {
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+}
+
+.add-new-task {
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.add-new-task input {
+    width: calc(100% - 40px);
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 4px 15px;
+}
+
+.add-new-task .add-task {
+    width: 30px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e7e7e7;
+    border: 1px solid #ccc;
+    color: cornflowerblue;
+    border-radius: 4px;
+}
+
+.cheker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cheker .fa-check{
+    display: none;
+}
+
+.cheker.cheked .fa-check{
+    display: inline-block;
+}
