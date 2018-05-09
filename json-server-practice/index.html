@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="menu">
+    <div class="form-create-element">
+      <h2 class="form-create-element-title">Create new post</h2>
+      <label>Author: <input type="text" class="text-author" placeholder="name..."></label>
+      <label>Title: <input type="text" class="text-title" placeholder="..."></label>
+      <input type="submit" class="crete-element" value="Create">
+    </div>
+  </div>
+
+  <div class="output">
+    <table class="posts">
+      <caption class="table-title">Posts</caption>
+      <tr>
+        <th class="header-author">author</th>
+        <th class="header-title">title</th>
+        <th class="header-edit">edit</th>
+        <th class="header-delete">del</th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

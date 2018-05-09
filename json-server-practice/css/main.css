@@ -1,0 +1,118 @@
+.wrapper {
+	display: flex;
+}
+
+.menu {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid grey;
+}
+
+.form-create-element {
+	box-sizing: border-box;
+	width: 80%;
+	margin: 10px auto 0;
+	border: 1px solid grey;
+	background: hsl(30,90%,98%);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-create-element-title {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.form-create-element input[type="text"] {
+	margin-bottom: 5px;
+}
+
+.output {
+	max-width: 600px;
+	margin: 10px auto 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.posts {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	border-radius: 50%;
+	font-size: 14px;
+	text-align: center;
+}
+
+.table-title {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 10px 0;
+	border: 1px solid grey;
+	border-bottom: none;
+	background-color: hsl(30,90%,98%);
+}
+
+.hide {
+	display: none;
+}
+
+.posts tr {
+	border: 1px solid grey;
+}
+
+th[class|="header"] {
+	padding: 15px;
+	font-size: 18px;
+	border: 1px solid grey;
+	text-transform: uppercase;
+
+}
+
+.posts td {
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.post-author,
+.post-title {
+	min-width: 200px;
+}
+
+.edit-author,
+.edit-title {
+	border: 1px solid rgb(77, 144, 254);
+	text-align: center;
+	font-size: 13px;
+	font-style: italic;
+	margin-bottom: -2px;
+}
+
+.post-delete {
+	font-size: 17px;
+}
+
+.post-delete:hover {
+	color: red;
+}
+
+.post-edit {
+	font-size: 17px;
+}
+
+.post-edit:hover {
+	color: green;
+}
+
+.save-img {
+	color: rgb(77, 144, 254);
+}
+
+.save-img:hover {
+	color: green;
+}
+
+
+
