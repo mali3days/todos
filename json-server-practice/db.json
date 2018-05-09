@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "title": "Working in own city",
+      "author": "Jerromy Angilim",
+      "id": 1
+    },
+    {
+      "title": "Hidden Wave",
+      "author": "Meztli Piloqutinnguaq",
+      "id": 2
+    },
+    {
+      "title": "The Missing Academy",
+      "author": "Tlaloc Nanook",
+      "id": 3
+    },
+    {
+      "title": "Wave of Gift",
+      "author": "Naiche Ailen",
+      "id": 4
+    },
+    {
+      "title": "The Flower's Female",
+      "author": "Malik Antinanco",
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

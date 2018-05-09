@@ -1,0 +1,52 @@
+.wrp {
+	padding: 20px;
+	text-align: center;
+}
+
+.title span {
+	text-decoration: underline;
+}
+
+.content {
+	min-height: 50px;
+	max-height: 370px;
+	overflow: auto;
+}
+
+.dog {
+	height: 100px;
+	width: 130px;
+	margin: 8px;
+}
+
+.dog-wrp {
+	display: inline-block;
+}
+
+.btn {
+	color: white;
+	background-color: green;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:disabled {
+	background-color: #7f94a1;
+}
+
+.btn-dog {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.loader-wrp {
+	vertical-align: top;
+}
+
+.loader-custom {
+	font-size:48px !important;
+	color: green;
+	margin-top: 15px;
+}
