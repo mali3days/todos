@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background: lightcyan;
+            padding: 15px 20px;
+            z-index: 99;
+            border: none;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow-y: scroll;
+            height: 500px;
+        }
+        .column{
+            width: 25%;
+            padding: 10px;
+            height: 200px;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .loader{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+
+        }
+        .loader:before,
+        .loader:after {
+            content: "";
+            height: 40px;
+            width: 40px;
+            border: 8px solid rgba(255,255,255,.5);
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+        }
+
+        .loader:before {
+            animation: animate 2s infinite linear;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0) skew(0);
+            }
+
+            100% {
+                transform: rotate(180deg) skew(360deg);
+            }
+        }
+
+
+        .loader:after {
+            animation: animate2 2s infinite linear;
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: rotate(0) skew(0);
+            }
+
+            100% {
+                transform: rotate(-180deg) skew(-360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
