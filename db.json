@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "title": "json-server",
+      "author": "jsintensive",
+      "id": 1
+    },
+    {
+      "title": "json-server",
+      "author": "slash",
+      "age": "99",
+      "id": 3
+    },
+    {
+      "title": "json-server",
+      "author": "olena",
+      "id": 4
+    },
+    {
+      "title": "json-server",
+      "author": "dom",
+      "id": 5
+    },
+    {
+      "author": "nike",
+      "title": "json-server",
+      "id": 13
+    },
+    {
+      "author": "gfbfb",
+      "title": "gfbsbg",
+      "id": 14
+    },
+    {
+      "author": "yhyhe",
+      "title": "yheyhyhhe",
+      "id": 15
+    },
+    {
+      "author": "ymny",
+      "title": "ynymy",
+      "id": 16
+    },
+    {
+      "author": "ndhh",
+      "title": "dhnhnj",
+      "id": 17
+    },
+    {
+      "author": "ghfxghn",
+      "title": "nnng",
+      "id": 18
+    },
+    {
+      "author": "dghdh",
+      "title": "dhth",
+      "id": 19
+    },
+    {
+      "author": "c cg",
+      "title": "cv cv ",
+      "id": 20
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "body": "comment2",
+      "timeCreate": "11.46",
+      "id": 2
+    },
+    {
+      "body": "comment3",
+      "timeCreate": "11.47",
+      "id": 3
+    },
+    {
+      "body": "comment2",
+      "timeCreate": "11.46",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

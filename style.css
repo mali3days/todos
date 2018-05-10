@@ -1,0 +1,21 @@
+
+.card-flex{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid dodgerblue;
+    flex: 1;
+}
+.post-card{
+    display: flex;
+    flex: 1;
+    width: 50%;
+    margin-top: 10px;
+    border: 1px solid dodgerblue;
+}
+.input-card{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 10px;
+
+}
