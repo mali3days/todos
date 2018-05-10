@@ -1,0 +1,11 @@
+.divPost {
+    width: 350px;
+    border:1px solid green;
+    margin-top: 10px;
+}
+.delete {
+    margin-left: 10px;
+}
+.spanT {
+    margin: 0 10px;
+}
